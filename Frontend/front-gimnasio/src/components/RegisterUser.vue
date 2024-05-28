@@ -1,4 +1,5 @@
-<template>
+
+    <template>
     <!DOCTYPE html>
     <html>
 
@@ -6,7 +7,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./output.css" rel="stylesheet" />
-        <title>Iniciar seción</title>
+        <title>Registrarse</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -22,14 +23,69 @@
                 <div
                     class="border-[20px] border-transparent rounded-[20px] dark:bg-gray-900 bg-white shadow-lg xl:p-10 2xl:p-10 lg:p-10 md:p-10 sm:p-2 m-2">
                     <h1 class="pt-8 pb-6 font-bold text-5xl dark:text-gray-400 text-center cursor-default">
-                        Iniciar seción
+                        Registrar Usuario
                     </h1>
+                    <h4>
+                        Datos personales
+                    </h4>
                     <form action="#" method="post" class="space-y-4">
                         <div>
-                            <label for="email" class="mb-2 dark:text-gray-400 text-lg">Email</label>
-                            <input id="email"
+                            <label for="nombre" class="mb-2 dark:text-gray-400 text-lg">Nombre</label>
+                            <input id="nombre"
                                 class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                                type="email" placeholder="Email" required />
+                                type="text" placeholder="Nombre" required />
+                        </div>
+                        <div>
+                            <label for="primer apellido" class="mb-2 dark:text-gray-400 text-lg">Primer apellido</label>
+                            <input id="primerApellido"
+                                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                                type="text" placeholder="Primer apellido" required />
+                        </div>
+                        <div>
+                            <label for="segundo apellido" class="mb-2 dark:text-gray-400 text-lg">Segundo apellido</label>
+                            <input id="segundoApellido"
+                                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                                type="text" placeholder="Segundo apellido" required />
+                        </div>
+                        <div>
+                            <label for="titulo de cortesia" class="mb-2 dark:text-gray-400 text-lg">Titulo de cortesia</label>
+                            <input id="TtituloDeCortesia"
+                                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                                type="text" placeholder="Titulo de cortesia" required />
+                        </div>
+                        <div>
+                            <label for="foto" class="mb-2 dark:text-gray-400 text-lg">Foto</label>
+                            <input id="foto"
+                                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                                type="file" placeholder="Foto" required />
+                        </div>
+                        <div>
+                            <label for="sangre" class="mb-2 dark:text-gray-400 text-lg">Selecciona tipo de sangre</label>
+                            <select name="sangre">
+                                <option value="a+">A+</option>
+                                <option value="a-">A-</option>
+                                <option value="b+">B+</option>
+                                <option value="b-">B-</option>
+                                <option value="ab+">AB+</option>
+                                <option value="ab-">AB-</option>
+                                <option value="o+">O+</option>
+                                <option value="o-">O-</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="fechaNacimiento" class="mb-2 dark:text-gray-400 text-lg">Fecha de Nacimiento</label>
+                            <input id="fechaNacimiento"
+                                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                                type="date" placeholder="Fecha de Nacimiento" required />
+                        </div>
+                        <h4>
+                            Datos de acceso
+                        </h4>
+                        <div>
+                            <label for="usuario" class="mb-2 dark:text-gray-400 text-lg">Usuario</label>
+                            <input id="usuario"
+                                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 mb-2 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                                type="text" placeholder="Usuario" required />
                         </div>
                         <div>
                             <label for="password" class="mb-2 dark:text-gray-400 text-lg">Contraseña</label>
@@ -37,19 +93,25 @@
                                 class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 mb-2 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
                                 type="password" placeholder="Contraseña" required />
                         </div>
+                        <div>
+                            <label for="password2" class="mb-2 dark:text-gray-400 text-lg">Repetir Contraseña</label>
+                            <input id="password2"
+                                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 mb-2 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                                type="password" placeholder="Repetir Contraseña" required />
+                        </div>
                         <button
                             class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
                             type="submit">
-                            Iniciar seción
+                            Registrarse
                         </button>
                     </form>
                     <div class="flex flex-col mt-4 items-center justify-center text-sm">
                         <h3>
-                            <span class="cursor-default dark:text-gray-300">¿No tiene una cuenta?</span>
+                            <span class="cursor-default dark:text-gray-300">¿Ya tiene una cuenta?</span>
                             <a class="group text-blue-400 transition-all duration-100 ease-in-out" href="#">
                                 <span
                                     class="bg-left-bottom ml-1 bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                    Registrarse
+                                    Iniciar seción
                                 </span>
                             </a>
                         </h3>
