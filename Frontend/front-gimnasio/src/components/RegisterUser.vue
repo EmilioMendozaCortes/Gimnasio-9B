@@ -9,7 +9,7 @@
         <link href="./output.css" rel="stylesheet" />
         <title>Registrarse</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" cross origin />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet" />
@@ -25,7 +25,7 @@
                     <h1 class="pt-8 pb-6 font-bold text-5xl dark:text-gray-400 text-center cursor-default">
                         Registrar Usuario
                     </h1>
-                    <h4>
+                    <h4 class="pt-8 pb-6 font-bold text-3xl dark:text-gray-400 text-center cursor-default">
                         Datos personales
                     </h4>
                     <form action="#" method="post" class="space-y-4">
@@ -54,14 +54,23 @@
                                 type="text" placeholder="Titulo de cortesia" required />
                         </div>
                         <div>
-                            <label for="foto" class="mb-2 dark:text-gray-400 text-lg">Foto</label>
+                            <label for="foto" class="mb-2 dark:text-gray-400 text-lg">Foto</label> <br>
                             <input id="foto"
                                 class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
                                 type="file" placeholder="Foto" required />
                         </div>
                         <div>
-                            <label for="sangre" class="mb-2 dark:text-gray-400 text-lg">Selecciona tipo de sangre</label>
+                            <label for="genero" class="mb-2 dark:text-gray-400 text-lg">Genero</label>
+                            <select name="genero">
+                                <option value="" disabled>Seleccione un genero</option>
+                                <option value="a+">Masculino</option>
+                                <option value="a-">Femenino</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="sangre" class="mb-2 dark:text-gray-400 text-lg">Tipo de sangre</label>
                             <select name="sangre">
+                                <option value="" disabled>Seleccione un tipo de sangre</option>
                                 <option value="a+">A+</option>
                                 <option value="a-">A-</option>
                                 <option value="b+">B+</option>
@@ -78,7 +87,7 @@
                                 class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
                                 type="date" placeholder="Fecha de Nacimiento" required />
                         </div>
-                        <h4>
+                        <h4 class="pt-8 pb-6 font-bold text-3xl dark:text-gray-400 text-center cursor-default">
                             Datos de acceso
                         </h4>
                         <div>
