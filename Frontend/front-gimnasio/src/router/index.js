@@ -20,6 +20,7 @@ const router = createRouter({
       component: RegisterUserView,
       children:[
         {path: '/personas', name: 'personas', component:RegisterUserView},
+        {path: '/', name: '/', component:LoginView},
       ]
     },
     {
@@ -27,7 +28,7 @@ const router = createRouter({
       name: 'dashboard',
       component: dashboardView,
       children:[
-        {path: '/personas', name: 'personas', component:RegisterUserView},
+        {path: '/personas', name: 'personas', component:UsuarioView},
       ]
     },
     {
