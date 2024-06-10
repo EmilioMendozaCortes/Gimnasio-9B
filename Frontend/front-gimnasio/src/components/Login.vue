@@ -8,7 +8,7 @@
         <link href="./output.css" rel="stylesheet" />
         <title>Iniciar seción</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" cross origin />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet" />
@@ -37,16 +37,18 @@
                                 class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 mb-2 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
                                 type="password" placeholder="Contraseña" required />
                         </div>
-                        <button
-                            class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
-                            type="submit">
-                            Iniciar seción
-                        </button>
+                        <RouterLink to="/menu">
+                            <button
+                                class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
+                                type="submit">
+                                Iniciar seción
+                            </button>
+                        </RouterLink>
                     </form>
                     <div class="flex flex-col mt-4 items-center justify-center text-sm">
                         <h3>
                             <span class="cursor-default dark:text-gray-300">¿No tiene una cuenta?</span>
-                            <a class="group text-blue-400 transition-all duration-100 ease-in-out" href="#">
+                            <a class="group text-blue-400 transition-all duration-100 ease-in-out" href="/register">
                                 <span
                                     class="bg-left-bottom ml-1 bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                                     Registrarse

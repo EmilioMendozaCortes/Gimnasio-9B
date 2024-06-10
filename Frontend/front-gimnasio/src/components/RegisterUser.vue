@@ -28,23 +28,23 @@
                         <h4 class="pt-8 pb-6 font-bold text-3xl dark:text-gray-400 text-center cursor-default">
                         Datos personales
                     </h4>
-                        <Usuario></Usuario>
-                        <h4 class="pt-8 pb-6 font-bold text-3xl dark:text-gray-400 text-center cursor-default">
-                            Datos de acceso
-                        </h4>
-                        <Persona></Persona>
-                        <RouterLink to="/">
-                            <button
-                                class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
-                                type="submit">
-                                Registrarse
-                            </button>
-                        </RouterLink>
+                    <Persona></Persona>
+                    <h4 class="pt-8 pb-6 font-bold text-3xl dark:text-gray-400 text-center cursor-default">
+                        Datos de acceso
+                    </h4>
+                    <Usuario></Usuario>
+                    <RouterLink to="/">
+                        <button
+                            class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
+                            type="submit">
+                            Registrarse
+                        </button>
+                    </RouterLink>
                     </form>
                     <div class="flex flex-col mt-4 items-center justify-center text-sm">
                         <h3>
                             <span class="cursor-default dark:text-gray-300">¿Ya tiene una cuenta?</span>
-                            <a class="group text-blue-400 transition-all duration-100 ease-in-out" href="#">
+                            <a class="group text-blue-400 transition-all duration-100 ease-in-out" href="/">
                                     <span
                                         class="bg-left-bottom ml-1 bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                                         Iniciar seción
