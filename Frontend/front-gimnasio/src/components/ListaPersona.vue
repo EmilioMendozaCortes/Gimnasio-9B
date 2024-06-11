@@ -101,19 +101,34 @@
                         </div>
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Product name
+                        Nombre
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Color
+                        Primer apellido
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Category
+                        Segundo apellido
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Price
+                        Titulo de cortesia
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Action
+                        Foto
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Genero
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Tipo de sangre
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Fecha de nacimiento
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Editar
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Eliminar
                     </th>
                 </tr>
             </thead>
@@ -134,13 +149,28 @@
                         Silver
                     </td>
                     <td class="px-6 py-4">
+                        Silver
+                    </td>
+                    <td class="px-6 py-4">
+                        Silver
+                    </td>
+                    <td class="px-6 py-4">
                         Laptop
                     </td>
                     <td class="px-6 py-4">
                         $2999
                     </td>
                     <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
                     </td>
                 </tr>
                 <tr
@@ -165,7 +195,22 @@
                         $1999
                     </td>
                     <td class="px-6 py-4">
+                        Laptop
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
                     </td>
                 </tr>
                 <tr
@@ -190,7 +235,22 @@
                         $99
                     </td>
                     <td class="px-6 py-4">
+                        Laptop
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
                     </td>
                 </tr>
                 <tr
@@ -215,7 +275,22 @@
                         $179
                     </td>
                     <td class="px-6 py-4">
+                        Laptop
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
                     </td>
                 </tr>
                 <tr
@@ -240,7 +315,22 @@
                         $699
                     </td>
                     <td class="px-6 py-4">
+                        Laptop
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
                     </td>
                 </tr>
                 <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -264,7 +354,22 @@
                         $3999
                     </td>
                     <td class="px-6 py-4">
+                        Laptop
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
+                        $2999
+                    </td>
+                    <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Eliminar</a>
                     </td>
                 </tr>
             </tbody>
