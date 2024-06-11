@@ -25,7 +25,9 @@
                             <path
                                 d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
                         </svg>
-                        <span class="ms-3">Dashboard</span>
+                        <RouterLink to="/home">
+                            <span class="ms-3">Dashboard</span>
+                        </RouterLink>
                     </a>
                 </li>
                 <li>
@@ -60,23 +62,31 @@
                     </button>
                     <ul id="dropdown-example4" class="hidden py-2 space-y-2">
                         <li>
-                            <a href="#"
+                            <RouterLink to="/dieta">
+                                <a href="#"
                                 class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Dietas</a>
+                            </RouterLink>
                         </li>
                         <li>
-                            <a href="#"
+                            <RouterLink to="/indicadorNutricional">
+                                <a href="#"
                                 class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Indicador
                                 nutricional</a>
+                            </RouterLink>
                         </li>
                         <li>
-                            <a href="#"
+                            <RouterLink to="/preguntaNutricional">
+                                <a href="#"
                                 class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Pregunta
                                 nutricional</a>
+                            </RouterLink>
                         </li>
                         <li>
-                            <a href="#"
+                            <RouterLink to="/valoracionNutricional">
+                                <a 
                                 class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Valoración
                                 nutricional</a>
+                            </RouterLink>
                         </li>
                     </ul>
                 </li>
