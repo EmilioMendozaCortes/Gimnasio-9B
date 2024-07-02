@@ -49,5 +49,13 @@ def create_user(user: schemas.users.UserCreate, db: Session=Depends(get_db)):
 def update_user(id:int,user: schemas.users.UserUpdate, db: Session=Depends(get_db)):
     db_users = crud.users.update_user(db=db, id=id, user=user)
     if db_users is None:
-        raise HTTPException(status_code=404, detail="Usuario no existe, intenta nuevamente")
-    return crud.users.create_user(db=db, user=user)
+        raise HTTPException(status_code=404, detail="Usuario no existe, no se pudo actualizar ")
+    return db_users
+
+# Ruta para eliminar un usuario
+@user.put('/users/{id}', response_model=schemas.users.User,tags=['Usuarios'])
+def delete_user(id:int, db: Session=Depends(get_db)):
+    db_users = crud.users.delete_user(db=db, id=id)
+    if db_users is None:
+        raise HTTPException(status_code=404, detail="Usuario no existe, no se pudo eliminar ")
+    return db_users
