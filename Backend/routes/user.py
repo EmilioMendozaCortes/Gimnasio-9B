@@ -29,12 +29,12 @@ def read_users(skip: int=0, limit: int=10, db: Session=Depends(get_db)):
     return db_users
 
 # Ruta para obtener un usuario por ID
-@user.post('/users/{id}', response_model=schemas.users.User,tags=['Usuarios'])
-def read_users(id:int, db: Session=Depends(get_db)):
-    db_users = crud.users.get_users(db=db,id=id)
-    if db_users is None:
+@user.post("/user/{id}", response_model=schemas.users.User, tags=["Usuarios"])
+def read_user(id: int, db: Session = Depends(get_db)):
+    db_user= crud.users.get_user(db=db, id=id)
+    if db_user is None:
         raise HTTPException(status_code=404, detail="User not found")
-    return db_users
+    return db_user
 
 # Ruta para crear un usurio
 @user.post('/users/', response_model=schemas.users.User,tags=['Usuarios'])
@@ -53,7 +53,7 @@ def update_user(id:int,user: schemas.users.UserUpdate, db: Session=Depends(get_d
     return db_users
 
 # Ruta para eliminar un usuario
-@user.put('/users/{id}', response_model=schemas.users.User,tags=['Usuarios'])
+@user.delete('/users/{id}', response_model=schemas.users.User,tags=['Usuarios'])
 def delete_user(id:int, db: Session=Depends(get_db)):
     db_users = crud.users.delete_user(db=db, id=id)
     if db_users is None:
