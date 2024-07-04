@@ -35,8 +35,7 @@
                             type="text" placeholder="Segundo apellido" required />
                     </div>
                     <div>
-                        <label for="titulo de cortesia" class="mb-2 dark:text-gray-400 text-lg">Titulo de
-                            cortesia</label>
+                        <label for="titulo de cortesia" class="mb-2 dark:text-gray-400 text-lg">Titulo de cortesia</label>
                         <input id="TtituloDeCortesia"
                             class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
                             type="text" placeholder="Titulo de cortesia" required />
