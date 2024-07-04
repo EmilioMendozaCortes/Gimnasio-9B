@@ -10,7 +10,8 @@ class PersonBase(BaseModel):
     foto:str
     genero:str
     tipo_sangre:str
-    fecha_nacimiento:str
+    fecha_nacimiento:datetime
+    fecha_actualizacion:datetime
     created_at: datetime
     estatus: bool
     # Id_persona: int

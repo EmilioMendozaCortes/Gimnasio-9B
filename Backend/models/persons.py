@@ -14,6 +14,8 @@ class Person(Base):
     genero = Column(String(15), index=True)
     tipo_sangre = Column(String(5), index=True)
     fecha_nacimiento =Column(DateTime)
+    fecha_actualizacion =Column(DateTime)
     estatus = Column(Boolean, index=False)
+    created_at = Column(DateTime)
     # Id_persona = Column(Integer)
     # intems = relationship("Item", back_populates="owner") Clave foranea

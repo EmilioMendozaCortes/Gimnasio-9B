@@ -7,33 +7,33 @@ import models, schemas
 def get_person(db:Session, id: int):
     return db.query(models.persons.Person).filter(models.persons.Person.id == id).first()
 
-# Busqueda por USUARIO
-def get_person_by_usuario(db:Session, usuario: str):
-    return db.query(models.persons.Person).filter(models.persons.Person.usuario == usuario).first()
+# Busqueda por nombre
+def get_person_by_nombre(db:Session, nombre: str):
+    return db.query(models.persons.Person).filter(models.persons.Person.nombre == nombre).first()
 
-# Buscar todos los usuarios
+# Buscar todos las personas
 def get_persons(db:Session, skip: int=0, limit:int=10):
     return db.query(models.persons.Person).offset(skip).limit(limit).all()
 
-# Crear nuevo usuario
-def create_person(db:Session, user: schemas.persons.PersonCreate):
-    db_person = models.persons.Person(usuario=user.usuario, password=user.password, created_at=user.created_at, estatus=user.estatus, Id_persona=user.Id_persona)
+# Crear una nueva personas
+def create_person(db:Session, person: schemas.persons.PersonCreate):
+    db_person = models.persons.Person(titulo_cortesia=person.titulo_cortesia,nombre=person.nombre, primer_apellido=person.primer_apellido, segundo_apellido=person.segundo_apellido, foto=person.foto, genero=person.genero,tipo_sangre=person.tipo_sangre, fecha_nacimiento=person.fecha_nacimiento, fecha_actualizacion=person.fecha_actualizacion,created_at=person.created_at, estatus=person.estatus)
     db.add(db_person)
     db.commit()
     db.refresh(db_person)
     return db_person
 
-# Actualizar un usuario por ID
-def update_person(db:Session, id:int, user:schemas.persons.PersonUpdate):
+# Actualizar una personas por ID
+def update_person(db:Session, id:int, person:schemas.persons.PersonUpdate):
     db_person = db.query(models.persons.Person).filter(models.persons.Person.id == id).first()
     if db_person:
-        for var, value in vars(user).items():
+        for var, value in vars(person).items():
             setattr(db_person, var, value) if value else None
         db.commit()
         db.refresh(db_person)
     return db_person
 
-# Eliminar un usuario por ID
+# Eliminar una personas por ID
 def delete_person(db:Session, id:int):
     db_person = db.query(models.persons.Person).filter(models.persons.Person.id == id).first()
     if db_person:
