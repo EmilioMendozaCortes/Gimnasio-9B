@@ -34,7 +34,7 @@ def read_person(id: int, db: Session = Depends(get_db)):
 # Ruta para crear un usurio
 @person.post('/persons/', response_model=schemas.persons.Person,tags=['Personas'])
 def create_person(person: schemas.persons.PersonCreate, db: Session=Depends(get_db)):
-    db_persons = crud.persons.get_person_by_nombre(db,nombre=person.nombre)
+    db_persons = crud.persons.get_person_by_nombre(db,nombre=person.Nombre)
     if db_persons:
         raise HTTPException(status_code=400, detail="Persona existente intenta nuevamente")
     return crud.persons.create_person(db=db, person=person)
