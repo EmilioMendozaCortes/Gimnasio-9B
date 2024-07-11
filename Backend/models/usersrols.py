@@ -8,8 +8,8 @@ from sqlalchemy import PrimaryKeyConstraint
 
 class UserRol(Base):
     __tablename__ = 'tbd_usuarios_roles'
-    Usuario_ID = Column(Integer, primary_key=True, index=True)
-    Rol_ID = Column(Integer, primary_key=True, index=True)
+    Usuario_ID = Column(Integer, ForeignKey("tbb_usuarios.ID"))
+    Rol_ID = Column(Integer, ForeignKey("tbc_roles.ID"))
     Estatus = Column(Boolean)
     Fecha_Registro = Column(DateTime)
     Fecha_Actualizacion = Column(DateTime)
