@@ -34,23 +34,23 @@ def get_userrol_by_ids(usuario_id: int, rol_id: int, db: Session = Depends(get_d
 # Ruta para crear un usuario-rol
 @userrol.post('/usersrols/', response_model=schemas.usersrols.UserRol,tags=['Usuarios-Roles'])
 def create_rol(userrol: schemas.usersrols.UserRolCreate, db: Session=Depends(get_db)):
-    db_userrols = crud.usersrols.get_userrol_by_ids(db,rol=userrol.Usuario_ID)
+    db_userrols = crud.usersrols.get_userrol_by_ids(db, usuario_id=userrol.Usuario_ID, rol_id=userrol.Rol_ID)
     if db_userrols:
         raise HTTPException(status_code=400, detail="User-Rol existente intenta nuevamente")
     return crud.usersrols.create_userrol(db=db, userrol=userrol)
 
 # Ruta para actualizar un usuario-rol
-@userrol.put("/usersrol/{usuario_id}/{rol_id}/{nuevo_estatus}", response_model=schemas.usersrols.UserRol, tags=["Usuarios-Roles"])
-def update_userrol_status(usuario_id: int, rol_id: int, nuevo_estatus: str, db: Session = Depends(get_db)):
-    db_userrol = crud.usersrols.update_userrol_status(db=db, usuario_id=usuario_id, rol_id=rol_id, nuevo_estatus=nuevo_estatus)
+@userrol.put("/usersrol/{usuario_id}/{rol_id}", response_model=schemas.usersrols.UserRol, tags=["Usuarios-Roles"])
+def update_userrol(usuario_id: int, rol_id: int, userrol:schemas.usersrols.UserRolUpdate, db: Session = Depends(get_db)):
+    db_userrol = crud.usersrols.update_userrol(db=db, usuario_id=usuario_id, rol_id=rol_id, userrol=userrol)
     if db_userrol is None:
         raise HTTPException(status_code=404, detail="User-Rol not found")
     return db_userrol
 
 # Ruta para eliminar un Rol
-@userrol.delete('/usersrols/{id}', response_model=schemas.usersrols.UserRol,tags=['Usuarios-Roles'])
-def delete_rol(id:int, db: Session=Depends(get_db)):
-    db_userrols = crud.usersrols.delete_userrol(db=db, id=id)
+@userrol.delete('/usersrols/{usuario_id}/{rol_id}', response_model=schemas.usersrols.UserRol,tags=['Usuarios-Roles'])
+def delete_rol(usuario_id: int, rol_id: int, db: Session=Depends(get_db)):
+    db_userrols = crud.usersrols.delete_userrol(db=db, usuario_id=usuario_id,rol_id=rol_id )
     if db_userrols is None:
         raise HTTPException(status_code=404, detail="User-Rol no existe, no se pudo eliminar ")
     return db_userrols

@@ -12,8 +12,10 @@ class UserRolBase(BaseModel):
 class UserRolCreate(UserRolBase):
     pass
 
-class UserRolUpdate(UserRolBase):
-    pass
+class UserRolUpdate(BaseModel):
+    Estatus: bool
+    Fecha_Registro: datetime
+    Fecha_Actualizacion: datetime
 
 class UserRol(UserRolBase):
     Usuario_ID:int

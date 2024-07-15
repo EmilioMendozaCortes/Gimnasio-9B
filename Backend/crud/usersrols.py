@@ -17,32 +17,36 @@ def get_usersrols(db:Session, skip: int=0, limit:int=10):
 # Crear nuevo usuaurios-roles
 def create_userrol(db:Session, userrol: schemas.usersrols.UserRolCreate):
     db_userrol = models.usersrols.UserRol(Usuario_ID=userrol.Usuario_ID, 
-                                        Rol_ID=userrol.Rol_ID,
-                                        Estatus=userrol.Estatus, 
-                                        Fecha_Registro=userrol.Fecha_Registro, 
-                                        Fecha_Actualizacion=userrol.Fecha_Actualizacion)
+                                          Rol_ID=userrol.Rol_ID,
+                                          Estatus=userrol.Estatus, 
+                                          Fecha_Registro=userrol.Fecha_Registro, 
+                                          Fecha_Actualizacion=userrol.Fecha_Actualizacion)
     db.add(db_userrol)
     db.commit()
     db.refresh(db_userrol)
     return db_userrol
 
-# Actualizar un usuaurios-roles
-def update_userrol_status(db: Session, usuario_id: int, rol_id: int, nuevo_estatus: bool):
+# Actualizar un usuario-rol
+def update_userrol(db: Session, usuario_id: int, rol_id: int, userrol: schemas.usersrols.UserRolUpdate):
     db_userrol = db.query(models.usersrols.UserRol).filter(
         models.usersrols.UserRol.Usuario_ID == usuario_id,
         models.usersrols.UserRol.Rol_ID == rol_id
     ).first()
     if db_userrol:
-        db_userrol.Estatus = nuevo_estatus
+        # Actualiza solo los campos deseados
+        db_userrol.Estatus = userrol.Estatus
+        db_userrol.Fecha_Registro = userrol.Fecha_Registro
+        db_userrol.Fecha_Actualizacion = userrol.Fecha_Actualizacion
+
         db.commit()
         db.refresh(db_userrol)
-        return db_userrol
-    else:
-        return None
+    return db_userrol
 
 # Eliminar un usuaurios-roles por id
-def delete_userrol(db:Session, id:int):
-    db_userrol = db.query(models.usersrols.UserRol).filter(models.usersrols.UserRol.Usuario_ID == id).first()
+def delete_userrol(db:Session,  usuario_id: int, rol_id: int):
+    db_userrol = db.query(models.usersrols.UserRol).filter(models.usersrols.UserRol.Usuario_ID == usuario_id,
+                                                           models.usersrols.UserRol.Rol_ID == rol_id
+    ).first()
     if db_userrol:
         db.delete(db_userrol)
         db.commit()
