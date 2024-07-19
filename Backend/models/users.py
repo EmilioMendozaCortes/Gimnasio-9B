@@ -22,4 +22,3 @@ class User(Base):
     Estatus = Column( Enum(MyEstatus))
     Fecha_Registro = Column(DateTime)
     Fecha_Actualizacion = Column(DateTime)
-    # intems = relationship("Item", back_populates="owner") Clave foranea
