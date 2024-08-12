@@ -16,3 +16,6 @@ export default defineConfig({
     }
   }
 })
+module.exports = {
+  outputDir: 'dist', // Asegúrate de que coincida con la carpeta de salida en Netlify
+};
