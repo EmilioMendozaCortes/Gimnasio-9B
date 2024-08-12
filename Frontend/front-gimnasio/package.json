@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "front-gimnasio": "file:",
     "lodash": "^4.17.10",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
